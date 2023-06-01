@@ -10,7 +10,7 @@ import NearbyJobCard from "../../common/cards/nearby/NearbyJobCard";
 const Nearbyjobs = () => {
   const router = useRouter();
   const { data, isLoading, error } = useFetch("search", {
-    query: "React Native Developer",
+    query: "Mobile Developer",
     num_pages: 1,
   });
 

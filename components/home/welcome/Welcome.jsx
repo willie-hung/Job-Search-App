@@ -11,7 +11,6 @@ import {
 import styles from './welcome.style'
 import { icons, SIZES } from '../../../constants'
 import { useRouter } from 'expo-router'
-import { set } from 'react-native-reanimated'
 
 const jobTypes = ["Full-time", "Part-time", "Contractor"]
 
@@ -53,7 +52,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
               style={styles.tab(activeJobType, item)}
               onPress={() => {
                 setActiveJobType(item);
-                router.push("/search/${item}")
+                router.push(`/search/${item}`)
               }}
             >
               <Text style={styles.tabText(activeJobType, item)}>{item}</Text>
